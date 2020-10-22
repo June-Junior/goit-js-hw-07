@@ -20,7 +20,7 @@ const imagesNewArr = images.map(({url, alt}) => {
     console.log(url);
     console.log(alt);
     
-   return `<li><img src="${url}" alt="${alt}"></li>`;;
+   return `<li><img src="${url}" alt="${alt}"></li>`;
 })    
 console.log(imagesNewArr);
   
