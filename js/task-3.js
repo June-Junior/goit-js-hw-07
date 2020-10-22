@@ -19,15 +19,17 @@ const images = [
 const imagesNewArr = images.map(({url, alt}) => {
     console.log(url);
     console.log(alt);
-   return ({url, alt});
+    
+   return `<li><img src="${url}" alt="${alt}"></li>`;;
 })    
 console.log(imagesNewArr);
   
 const galleryMainList = document.querySelector("#gallery");
 console.log(galleryMainList);
+galleryMainList.classList.add("mainListStyles");
 
-  galleryMainList.insertAdjacentHTML('afterbegin',
-  `<li><img src="${imagesNewArr.url}" alt="${imagesNewArr.alt}"></li>`);
+  galleryMainList.insertAdjacentHTML('afterbegin', imagesNewArr.join()
+  );
 console.log(galleryMainList);
 
 // 

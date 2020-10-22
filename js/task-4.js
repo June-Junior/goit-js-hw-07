@@ -1,27 +1,46 @@
-// const article = document.querySelector(".article");
-// const htmlString =
-//   `<p class="article-text">Nullam quis ante. Vestibulum dapibus nunc ac augue. In consectetuer turpis ut velit.</p>
-//    <a class="link" href="#">Read more...</a>`;
+const counterValue = document.querySelector("#value");
+const counterEl = {
+    value: 0,
+    increment() {
+        this.value += 1;
+    },
+    decrement() {
+        this.value -= 1;
+    },
+};
+const btn = document.querySelectorAll("button");
 
-// // Уберите += и поставьте =, видите результат? заголовок удаляется,
-// // еще раз перечитайте сноску о работе innerHTML, о том как содержимое перезаписывается
-// // Если необходимо добавить к уже существующей разметке, то используем +=
-// // article.innerHTML += htmlString;
+const btnDecrement = btn[0];
+const btnIncrement = btn[1];
 
-// // Можно делать множественные вставки, для этого мы конкатенируем
-// // всю необходимую разметку в одну строку, после чего присваиваем ее
-// // innerHTML родителя. 
-// // Почему именно так, а не поэлементно? Об этом мы поговорим далее.
-// const list = document.querySelector(".list");
-// const tech = ["HTML", "CSS", "JavaScript", "React", "Node"];
+btnDecrement.addEventListener('click', function () {
 
-// const markup = tech.reduce(
-//   (string, item) => string + `<li>${item}</li>`,
-//   ""
-// );
+    counterEl.decrement();
+    console.log(counterEl);
+    counterValue.textContent = counterEl.value;
+})
+btnIncrement.addEventListener('click', function () {
 
-// // Посмотрите что будет в консоли, одна длинная строка с "тегами"
-// console.log(markup);
+    counterEl.increment();
+    console.log(counterEl);
+    counterValue.textContent = counterEl.value;
+})
 
-// // Вешаем всю разметку за одно обращение к DOM
-// list.innerHTML = markup;
+console.log(btn);
+console.log(btnDecrement);
+console.log(btnIncrement);
+console.log(counterValue);
+
+// const counterEl = document.querySelector("#counter");
+// console.log(document);
+// const btnIncrement = btn.dataset.action="increment";
+// const btnDecrement = btn.dataset.action="decrement";
+
+
+// console.log(btnIncrement);
+// console.log(typeof(btnIncrement));
+// console.log(btnDecrement);
+// console.log(typeof(btnDecrement));
+
+
+// const btn = document.querySelector("button[data-action="decrement"]");
