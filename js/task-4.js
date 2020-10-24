@@ -30,6 +30,7 @@ console.log(btn);
 console.log(btnDecrement);
 console.log(btnIncrement);
 console.log(counterValue);
+console.log(counterEl);
 
 // const counterEl = document.querySelector("#counter");
 // console.log(document);
