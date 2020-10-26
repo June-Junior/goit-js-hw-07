@@ -11,4 +11,4 @@ allCategoriesEl.forEach(category => {
    const listItemEl = category.querySelectorAll(".item li");
    console.log(`Количество элементов: ${listItemEl.length}`);
 });
-
+ 
