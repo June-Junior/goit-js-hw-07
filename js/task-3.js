@@ -28,7 +28,9 @@ const galleryMainList = document.querySelector("#gallery");
 console.log(galleryMainList);
 galleryMainList.classList.add("mainListStyles");
 
-  galleryMainList.insertAdjacentHTML('afterbegin', imagesNewArr.join()
-  );
+console.log(galleryMainList.childNodes);
+console.log(galleryMainList.children);
+
+  galleryMainList.insertAdjacentHTML('afterbegin', imagesNewArr.join(''));
 console.log(galleryMainList);
 

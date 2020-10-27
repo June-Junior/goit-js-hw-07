@@ -1,6 +1,10 @@
 .mainListStyles {
     display: flex;
-
+    
+}
+.listItemsStyles {
+    width: 200px;
+    height: 200px;
 }
 
 #validation-input {

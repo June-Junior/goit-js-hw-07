@@ -9,7 +9,7 @@ const counterEl = {
     },
 };
 const btn = document.querySelectorAll("button");
-
+console.log(btn);
 const btnDecrement = btn[0];
 const btnIncrement = btn[1];
 
