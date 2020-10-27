@@ -52,16 +52,21 @@ function createBoxes(amount) {
     console.log(amount);
     let boxesRefWidth = 30;
     let boxesRefHeigth = 30; 
+    const anyBoxesArr = [];
     for (let i = 0; i < amount; i += 1) {
         let anyBox = document.createElement("div");
         console.log(anyBox.attributes);
        anyBox.style.width = boxesRefWidth + [i] * 10 + "px";
        anyBox.style.height = boxesRefHeigth + [i] * 10 + "px";
-        
-    boxesRef.appendChild(anyBox);
+       
+
     console.log(boxesRef);    
     anyBox.style.backgroundColor = randomColor();
+    console.log(anyBoxesArr);
+    anyBoxesArr.push(anyBox); 
     }
+    console.log(anyBoxesArr);
+    boxesRef.append(...anyBoxesArr);
 } 
 
 function randomColor() {
